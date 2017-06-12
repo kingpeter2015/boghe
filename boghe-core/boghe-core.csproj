@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -10,8 +10,14 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BogheCore</RootNamespace>
     <AssemblyName>BogheCore</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -206,11 +212,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\boghe-xdm\boghe-xdm.csproj">
-      <Project>{C916D357-A1FF-46C8-B3BA-28173F5ACEE9}</Project>
+      <Project>{c916d357-a1ff-46c8-b3ba-28173f5acee9}</Project>
       <Name>boghe-xdm</Name>
     </ProjectReference>
     <ProjectReference Include="..\doubango\doubango.csproj">
-      <Project>{93201A98-88E0-4430-BCEB-643E58C28C66}</Project>
+      <Project>{93201a98-88e0-4430-bceb-643e58c28c66}</Project>
       <Name>doubango</Name>
     </ProjectReference>
   </ItemGroup>

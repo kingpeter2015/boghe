@@ -53,3 +53,8 @@ using System.Windows;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("2.0.201.1317")]
 [assembly: AssemblyFileVersion("2.0.201.1317")]
+
+#pragma warning disable CS0618 // Type or member is obsolete
+[assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config", Watch = true)]
+//[assembly: log4net.Config.DOMConfigurator(ConfigFile = "Log4Net.config", Watch = true)]
+#pragma warning restore CS0618 // Type or member is obsolete

@@ -1,0 +1,13 @@
+/.vs/boghe-win32/v14/*.suo
+/Debug
+/boghe-app/obj
+/.vs
+/Backup
+/*.user
+/UpgradeLog.htm
+/Static_Debug
+/boghe-controls/obj/Debug
+/boghe-core/obj/Debug
+/*.db
+/boghe-xdm/obj/Debug
+/doubango/obj/Debug

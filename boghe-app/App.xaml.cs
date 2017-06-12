@@ -45,12 +45,27 @@ namespace BogheApp
         {
             try
             {
-                String log4net = String.Format(BogheApp.Properties.Resources.log4net_xml, Win32ServiceManager.SharedManager.ApplicationDataPath);
+                //string log4net = String.Format(BogheApp.Properties.Resources.log4net_xml, Win32ServiceManager.SharedManager.ApplicationDataPath);
+                //string log4net = String.Format(BogheApp.Properties.Resources.log4net_xml, Win32ServiceManager.SharedManager.ApplicationDataPath);
+                
+                #region log4net框架启动
+                {
+                    DateTime currentTime = DateTime.Now;
+                    log4net.GlobalContext.Properties["LogDir"] = currentTime.ToString("yyyyMM");
+                    log4net.GlobalContext.Properties["LogFileName"] = "_vmdi" + currentTime.ToString("yyyyMMdd");
+                    LOG = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+                    log4net.Config.XmlConfigurator.Configure();
+                }
+                #endregion
+                /*
                 using (Stream stream = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(log4net)))
                 {
                     XmlConfigurator.Configure(stream);
                     LOG = LogManager.GetLogger(typeof(App));
                 }
+                */
+                string strApplicationPath = Win32ServiceManager.SharedManager.ApplicationDataPath;
             }
             catch (Exception ex)
             {
